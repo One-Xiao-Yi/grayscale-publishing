@@ -1,0 +1,8 @@
+grayscale:
+  publishing:
+    node:
+      type: normal
+
+consumer:
+  feign:
+    service: example-serviceB

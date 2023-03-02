@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.xiao.yi</groupId>
+        <artifactId>grayscale-publishing</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>grayscale-publishing-openresty-lua</artifactId>
+
+    <properties>
+        <openresty.path>D:\openresty-1.21.4.1-win64</openresty.path>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.xiao.yi</groupId>
+                <artifactId>grayscale-publishing-openresty-plugin</artifactId>
+                <version>${project.version}</version>
+                <configuration>
+                    <deletePaths>
+                        <param>${openresty.path}\conf\nginx.conf</param>
+                        <param>${openresty.path}\${project.name}</param>
+                    </deletePaths>
+                    <copyPaths>
+                        <copyPath>
+                            <source>${project.basedir}\conf\nginx.conf</source>
+                            <target>${openresty.path}\conf\nginx.conf</target>
+                        </copyPath>
+                        <copyPath>
+                            <source>${project.basedir}\lua</source>
+                            <target>${openresty.path}\${project.name}</target>
+                        </copyPath>
+                    </copyPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -5,4 +5,7 @@
 /**/yarn.lock
 /**/*.iml
 /**/.umi
-dump.rdb
+redis/dump.rdb
+nacos/derby.log
+/nacos/
+/redis/

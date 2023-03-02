@@ -1,0 +1,9 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /control
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 6000ms

@@ -1,0 +1,17 @@
+nacos:
+  server: 127.0.0.1
+  port: 8848
+spring:
+  application:
+    name: example-service
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: ${nacos.server}:${nacos.port}
+      config:
+        file-extension: yaml
+        namespace: public
+      discovery:
+        namespace: public
+        metadata: { "nodeType": 0 }
