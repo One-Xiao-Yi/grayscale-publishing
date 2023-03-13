@@ -2,8 +2,8 @@ package com.xiao.yi.control.controller;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.extra.servlet.ServletUtil;
-import com.xiao.yi.control.data.model.reponse.ResponseModel;
 import com.xiao.yi.control.entry.LoginParam;
+import com.xiao.yi.control.model.reponse.ResponseModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,6 +1,7 @@
 export default {
   'menu.welcome': '欢迎',
-  'menu.resourceList': '资源列表',
+  'menu.apiResourceList': 'API资源',
+  'menu.staticResourceList': 'STATIC资源',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',
   'menu.admin': '管理页',

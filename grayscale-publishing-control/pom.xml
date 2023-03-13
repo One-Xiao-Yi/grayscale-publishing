@@ -14,7 +14,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>grayscale-publishing-control-server</module>
-        <module>grayscale-publishing-control-data</module>
         <module>grayscale-publishing-control-ui</module>
     </modules>
 

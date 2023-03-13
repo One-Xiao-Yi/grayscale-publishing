@@ -1,6 +1,6 @@
 package com.xiao.yi.control.service;
 
-import com.xiao.yi.control.data.entry.Rule;
+import com.xiao.yi.control.entry.Rule;
 
 /**
  * @author xiaoyi

@@ -39,7 +39,7 @@
 
         <dependency>
             <groupId>com.xiao.yi</groupId>
-            <artifactId>grayscale-publishing-control-data</artifactId>
+            <artifactId>grayscale-publishing-constants</artifactId>
             <version>${project.version}</version>
         </dependency>
 

@@ -6,7 +6,7 @@ import com.alibaba.cloud.nacos.ribbon.NacosServerList;
 import com.netflix.client.config.DefaultClientConfigImpl;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractServerList;
-import com.xiao.yi.control.data.enums.NodeTypeEnum;
+import com.xiao.yi.constants.enums.NodeTypeEnum;
 import org.springframework.beans.BeanUtils;
 
 import java.util.List;

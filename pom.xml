@@ -16,6 +16,7 @@
         <module>grayscale-publishing-gateway</module>
         <module>grayscale-publishing-route-web-spring-cloud-starter</module>
         <module>grayscale-publishing-route-webflux-spring-cloud-starter</module>
+        <module>grayscale-publishing-constants</module>
     </modules>
 
     <properties>

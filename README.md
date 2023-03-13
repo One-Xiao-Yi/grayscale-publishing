@@ -67,14 +67,14 @@ sequenceDiagram
 </dependency>
 ```
 
-#### 使用spring-webflux，使用该模式的web服务，还需一些额外的改造，详见[grayscale-publishing-api-resource-example](#grayscale-publishing-route-webflux-spring-cloud-starter):
+#### 使用spring-webflux，使用该模式的web服务，还需一些额外的改造，详见[grayscale-publishing-gateway](#grayscale-publishing-gateway):
 
 ```xml
 
 <dependency>
-   <groupId>com.xiao.yi</groupId>
-   <artifactId>grayscale-publishing-route-web-spring-cloud-starter</artifactId>
-   <version>${project.version}</version>
+    <groupId>com.xiao.yi</groupId>
+    <artifactId>grayscale-publishing-route-webflux-spring-cloud-starter</artifactId>
+    <version>${project.version}</version>
 </dependency>
 ```
 
@@ -86,7 +86,7 @@ sequenceDiagram
 
 基于Spring Cloud
 Gateway的微服务网关，主要负责根据Http请求中的请求头路由到对应的服务节点，包含特殊的[自定义filter](./grayscale-publishing-gateway/src/main/java/com/xiao/yi/gateway/filter/GrayscalePublishingLoadBalancerClientFilter.java)(
-对于Webflux方式的web服务的特殊路由处理，详见[grayscale-publishing-api-resource-example](#grayscale-publishing-route-webflux-spring-cloud-starter))。
+对于Webflux方式的web服务的特殊路由处理，详见[grayscale-publishing-route-webflux-spring-cloud-starter](#grayscale-publishing-route-webflux-spring-cloud-starter))。
 
 ### [grayscale-publishing-openresty-lua](./grayscale-publishing-openresty-lua)
 

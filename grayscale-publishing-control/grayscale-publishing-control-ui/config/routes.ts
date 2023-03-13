@@ -23,24 +23,36 @@ export default [
     ],
   },
   {
-    path: '/resource/list',
+    path: '/api/list',
     icon: 'HddTwoTone',
     hideChildrenInMenu: true,
-    name: 'resourceList',
+    name: 'apiResourceList',
     routes: [
       {
-        path: '/resource/list',
-        component: './resource/list',
+        path: '/api/list',
+        component: './api/list',
       }
     ]
   },
   {
-    path: '/resource/node',
+    path: '/api/node',
     hideChildrenInMenu: true,
     routes: [
       {
-        path: '/resource/node',
-        component: './resource/node',
+        path: '/api/node',
+        component: './api/node',
+      }
+    ]
+  },
+  {
+    path: '/static/tree',
+    icon: 'HddTwoTone',
+    hideChildrenInMenu: true,
+    name: 'staticResourceList',
+    routes: [
+      {
+        path: '/static/tree',
+        component: './static/tree',
       }
     ]
   },

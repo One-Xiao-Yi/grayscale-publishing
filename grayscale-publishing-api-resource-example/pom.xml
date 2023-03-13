@@ -9,7 +9,7 @@
 
     <artifactId>grayscale-publishing-api-resource-example</artifactId>
 
-    <name>grayscale-publishing-api-resource-example</name>
+    <name>grayscale-publishing-api-apiResource-example</name>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

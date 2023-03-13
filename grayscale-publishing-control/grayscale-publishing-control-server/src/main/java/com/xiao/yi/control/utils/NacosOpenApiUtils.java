@@ -4,9 +4,9 @@ import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.xiao.yi.control.data.entry.Resource;
-import com.xiao.yi.control.data.entry.ResourceNode;
-import com.xiao.yi.control.data.model.page.PageModel;
+import com.xiao.yi.control.entry.ApiResource;
+import com.xiao.yi.control.entry.ApiResourceNode;
+import com.xiao.yi.control.model.page.PageModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -59,23 +59,23 @@ public class NacosOpenApiUtils {
         return validateResponse(HttpRequest.get(url));
     }
 
-    public void updateServiceMetadata(Resource resource) {
+    public void updateServiceMetadata(ApiResource apiResource) {
         String url = String.join("",
                 host,
                 UPDATE_SERVICE_API,
                 "?",
                 "serviceName=",
-                resource.getResourceName(),
+                apiResource.getResourceName(),
                 "&namespace=",
                 namespace,
                 "&metadata=",
-                JSONUtil.toJsonStr(resource),
+                JSONUtil.toJsonStr(apiResource),
                 "&protectThreshold=",
                 "0");
         validateVoidResponse(HttpRequest.put(url));
     }
 
-    public void updateServiceInstanceMetadata(ResourceNode node) {
+    public void updateServiceInstanceMetadata(ApiResourceNode node) {
         String url = String.join("",
                 host,
                 UPDATE_SERVICE_INSTANCE_API,

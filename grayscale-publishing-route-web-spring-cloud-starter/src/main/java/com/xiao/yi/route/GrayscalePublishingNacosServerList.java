@@ -3,12 +3,9 @@ package com.xiao.yi.route;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
 import com.alibaba.cloud.nacos.ribbon.NacosServer;
 import com.alibaba.cloud.nacos.ribbon.NacosServerList;
-import com.netflix.client.config.DefaultClientConfigImpl;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractServerList;
-import com.xiao.yi.control.data.enums.NodeTypeEnum;
-import org.springframework.beans.BeanUtils;
-import org.springframework.web.context.request.RequestAttributes;
+import com.xiao.yi.constants.enums.NodeTypeEnum;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 

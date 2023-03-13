@@ -34,12 +34,11 @@ end
 local jsonRule = json.decode(rule)
 
 if jsonRule.ruleType == 1 and jsonRule.resources then
-    ngx.log(ngx.INFO, "jsonRule.resources type: ", type(jsonRule.resources))
     local ipUtil = require("ipUtil")
-    local ip = ipUtil.getIp()
+    local clientIp = ipUtil.getIp()
     for index, cacheIP in pairs(jsonRule.resources) do
-        ngx.log(ngx.INFO, "路由IP: " .. cacheIP .. ", Client IP: " .. ip)
-        if ip == cacheIP then
+        ngx.log(ngx.INFO, "路由IP: " .. cacheIP .. ", Client IP: " .. clientIp)
+        if clientIp == cacheIP then
             ngx.req.set_header("GRAYSCALE_PUBLISHING", 'grayscale')
             return
         end

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Index</title>
+</head>
+<body>
+<p id="nodeType"></p>
+</body>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/example-serviceA/nodeType",
+            method: "get",
+            async: false,
+            success: function (data) {
+                $('#nodeType').text("grayscale-" + data)
+            }
+        })
+    })
+</script>
+</html>

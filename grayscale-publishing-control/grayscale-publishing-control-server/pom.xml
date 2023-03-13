@@ -22,7 +22,7 @@
 
         <dependency>
             <groupId>com.xiao.yi</groupId>
-            <artifactId>grayscale-publishing-control-data</artifactId>
+            <artifactId>grayscale-publishing-constants</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -51,6 +51,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
         <dependency>

@@ -7,3 +7,14 @@ spring:
     host: 127.0.0.1
     port: 6379
     timeout: 6000ms
+  jackson:
+    default-property-inclusion: non_null
+
+grayscale:
+  static:
+    path: D:\openresty-1.21.4.1-win64\grayscale-publishing-openresty-lua\static
+
+common:
+  properties:
+    params:
+      serverHost: http://192.168.28.108:8088/control

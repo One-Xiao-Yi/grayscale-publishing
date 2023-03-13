@@ -26,6 +26,8 @@
                     <deletePaths>
                         <param>${openresty.path}\conf\nginx.conf</param>
                         <param>${openresty.path}\${project.name}</param>
+                        <param>${openresty.path}\logs\access.log</param>
+                        <param>${openresty.path}\logs\error.log</param>
                     </deletePaths>
                     <copyPaths>
                         <copyPath>
@@ -35,6 +37,10 @@
                         <copyPath>
                             <source>${project.basedir}\lua</source>
                             <target>${openresty.path}\${project.name}</target>
+                        </copyPath>
+                        <copyPath>
+                            <source>${project.basedir}\static</source>
+                            <target>${openresty.path}\${project.name}\static</target>
                         </copyPath>
                     </copyPaths>
                 </configuration>

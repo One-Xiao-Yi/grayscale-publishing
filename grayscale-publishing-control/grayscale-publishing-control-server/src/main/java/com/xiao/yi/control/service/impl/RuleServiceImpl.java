@@ -1,6 +1,6 @@
 package com.xiao.yi.control.service.impl;
 
-import com.xiao.yi.control.data.entry.Rule;
+import com.xiao.yi.control.entry.Rule;
 import com.xiao.yi.control.service.RuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

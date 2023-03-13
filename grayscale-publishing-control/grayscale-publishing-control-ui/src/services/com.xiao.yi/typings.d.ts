@@ -14,6 +14,10 @@ declare namespace API {
     code?: number,
   }
 
+  type StringResponseModel = ResponseModel & {
+    data: string
+  }
+
   type LoginParams = {
     username?: string;
     password?: string;
@@ -23,13 +27,13 @@ declare namespace API {
     data: string
   };
 
-  type Resource = {
+  type ApiResource = {
     resourceName: string,
     resourceType: type,
-    nodes?: Node[]
+    nodes?: ApiResourceNode[]
   }
 
-  type Node = {
+  type ApiResourceNode = {
     resourceName?: string;
     resourceType?: number;
     ip?: string;
@@ -53,6 +57,30 @@ declare namespace API {
   }
 
   type ResourceObjectResult = ResponseModel & {
-    data?: Resource
+    data?: ApiResource
+  }
+
+  type StaticResource = {
+    name: string,
+    directory: boolean,
+
+    children?: StaticResource[]
+  }
+
+  type RootResources = {
+    normal: StaticResource[],
+    grayscale: StaticResource[],
+  }
+
+  type StaticResourceObjectResponse = ResponseModel & {
+    data: StaticResource
+  }
+
+  type StaticResourceListResponse = ResponseModel & {
+    rows: StaticResource[]
+  }
+
+  type RootResourcesResponse = ResponseModel & {
+    data: RootResources
   }
 }
